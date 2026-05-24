@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Paw Felines</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="module-page-shell">
+    <div class="module-page">
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="index.html">
+            <img class="brand-mark" src="assets/logo.png" alt="Purrfect Paw logo">
+            <span>Purrfect Paw</span>
+          </a>
+        </div>
+        <div class="nav-right">
+          <div class="nav-datetime" id="nav-datetime" aria-live="polite"></div>
+          <a class="cart-link" href="cart.html" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2.2l1.4 8.2a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 1.9-1.5L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="17" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="module-layout">
+        <aside class="module-sidebar">
+          <p class="eyebrow">Logged in</p>
+          <h2 class="module-page-title">Member Hub</h2>
+          <div class="module-user">
+            <div class="module-user-copy">
+              <p><strong id="member-display-name">-</strong></p>
+              <p id="member-display-username">-</p>
+            </div>
+            <div class="module-user-avatar" aria-hidden="true"></div>
+          </div>
+          <div class="module-nav">
+            <a href="menu.html" data-page="menu">Menu</a>
+            <a href="cart.html" data-page="cart">Cart</a>
+            <a href="felines.html" data-page="felines">Felines</a>
+            <a href="profile.html" data-page="profile">Profile</a>
+          </div>
+          <div class="module-nav-actions">
+            <button class="button button-secondary module-logout" id="member-logout-button" type="button">Logout</button>
+          </div>
+        </aside>
+
+        <section class="module-panel">
+          <h1>Felines</h1>
+          <p class="module-note">Meet the cafe crew and their favorite little routines.</p>
+          <div class="module-stack feline-grid">
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat1.jpg" alt="Mochi the cafe cat">
+              <strong>Mochi</strong>
+              <p>Professional lap warmer, biscuit baker, and sleepy afternoon specialist.</p>
+            </div>
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat2.avif" alt="Miso the cafe cat">
+              <strong>Miso</strong>
+              <p>Curious window watcher who inspects every pastry box with care.</p>
+            </div>
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat3.jpg" alt="Pebble the cafe cat">
+              <strong>Pebble</strong>
+              <p>Gentle greeter known for calm blinks and dramatic stretch routines.</p>
+            </div>
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat4.webp" alt="Luna the cafe cat">
+              <strong>Luna</strong>
+              <p>Soft-footed explorer who claims the moonlit corner seat every evening.</p>
+            </div>
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat5.avif" alt="Tofu the cafe cat">
+              <strong>Tofu</strong>
+              <p>Round little snuggler with a talent for stealing hearts and warm blankets.</p>
+            </div>
+            <div class="feline-card">
+              <img class="feline-photo" src="assets/cat6.avif" alt="Maple the cafe cat">
+              <strong>Maple</strong>
+              <p>Sweet and curious companion who follows the scent of pastries all day.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="member.js"></script>
+  <script>renderFelinesPage();</script>
+</body>
+</html>

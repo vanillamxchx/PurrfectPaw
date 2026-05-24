@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Paw</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero" id="top">
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="#top">
+            <img class="brand-mark" src="assets/logo.png" alt="Purrfect Paw logo">
+            <span>Purrfect Paw</span>
+          </a>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#visit">Visit</a>
+          </div>
+        </div>
+        <div class="nav-right">
+          <a href="#" id="open-account-link">Login/Sign Up</a>
+        </div>
+      </nav>
+
+      <div class="hero-content reveal">
+        <div class="hero-copy">
+          <p class="eyebrow">Cozy cat cafe in full bloom</p>
+          <h1>Sip something sweet while new feline friends steal your heart.</h1>
+          <p class="hero-text">
+            A pastel little hideaway filled with warm drinks, fluffy residents, and corners made for slow afternoons.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#visit">Book a Snuggle Spot</a>
+            <button class="button button-secondary" id="open-account-button" type="button">Join the Cafe Club</button>
+          </div>
+        </div>
+
+        <div class="hero-card floating-card">
+          <div class="hero-card-top">
+            <span class="pill">Today&apos;s mood</span>
+          </div>
+          <div class="cat-gallery-frame" id="cat-gallery-frame" aria-label="Featured cafe cats">
+            <img
+              class="cat-gallery-photo"
+              id="cat-gallery-photo"
+              src="assets/cat1.jpg"
+              alt="Mochi from Purrfect Paw"
+            >
+          </div>
+          <p class="card-title" id="cat-gallery-title">Meet Mochi</p>
+          <p class="card-text" id="cat-gallery-text">Professional lap warmer, biscuit maker, and unofficial cafe host.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="info-grid reveal" id="about">
+        <article class="info-card">
+          <h2>Soft, sunny, and full of purrs</h2>
+          <p>
+            Every table is tucked between plants, plush seating, and gentle cat napping zones so the whole cafe feels like a little daydream.
+          </p>
+        </article>
+        <article class="info-card accent-card">
+          <p class="mini-label">Favorite things</p>
+          <ul class="feature-list">
+            <li>Handmade strawberry lattes</li>
+            <li>Adoptable rescue cats</li>
+            <li>Polaroid-worthy corners</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="visit-section reveal" id="visit">
+        <div class="visit-copy">
+          <p class="eyebrow">Plan your visit</p>
+          <h2>Come for the coffee, stay because a cat picked your lap.</h2>
+          <p>
+            Walk-ins are welcome, but booking ahead means we can save you the coziest window seat near the sleepy kittens.
+          </p>
+        </div>
+
+        <div class="visit-panel">
+          <div class="visit-item">
+            <span class="visit-label">Hours</span>
+            <strong>11:00 AM - 9:00 PM</strong>
+          </div>
+          <div class="visit-item">
+            <span class="visit-label">Location</span>
+            <strong>Manila, Philippines</strong>
+          </div>
+          <div class="visit-item">
+            <span class="visit-label">Best for</span>
+            <strong>Study dates, soft resets</strong>
+          </div>
+          <button class="button button-primary button-full" id="surprise-btn">Show Me a Cat Mood</button>
+          <p class="mood-note" id="mood-note">Mochi says: today is perfect for a caramel latte and a long nap.</p>
+        </div>
+      </section>
+
+      <section class="member-hub reveal hidden-hub" id="member-hub" aria-hidden="true">
+        <div class="member-hub-header">
+          <div>
+            <p class="eyebrow">Members only</p>
+            <h2>Your Purrfect Paw Hub</h2>
+            <p class="member-subtext">Pick a module to explore your members-only cafe space.</p>
+          </div>
+          <button class="button button-secondary" id="hub-logout-button" type="button">Logout</button>
+        </div>
+
+        <div class="member-grid">
+          <article class="member-card module-link-card" id="menu-module">
+            <div class="module-head">
+              <span class="module-icon">🍓</span>
+              <div>
+                <p class="mini-label">Module 1</p>
+                <h3>Menu</h3>
+              </div>
+            </div>
+            <p class="module-copy">Browse signature drinks and sweet little cafe treats.</p>
+            <a class="button button-secondary" href="menu.html">Open Menu</a>
+          </article>
+
+          <article class="member-card module-link-card" id="cart-module">
+            <div class="module-head">
+              <span class="module-icon">🛒</span>
+              <div>
+                <p class="mini-label">Module 2</p>
+                <h3>Cart</h3>
+              </div>
+            </div>
+            <p class="module-copy">Check selected treats, totals, and your current order list.</p>
+            <a class="button button-secondary" href="cart.html">Open Cart</a>
+          </article>
+
+          <article class="member-card module-link-card" id="felines-module">
+            <div class="module-head">
+              <span class="module-icon">🐱</span>
+              <div>
+                <p class="mini-label">Module 3</p>
+                <h3>Felines</h3>
+              </div>
+            </div>
+            <p class="module-copy">Meet the cafe residents and learn each cat&apos;s cozy little vibe.</p>
+            <a class="button button-secondary" href="felines.html">Open Felines</a>
+          </article>
+
+          <article class="member-card module-link-card" id="profile-module">
+            <div class="module-head">
+              <span class="module-icon">👤</span>
+              <div>
+                <p class="mini-label">Module 4</p>
+                <h3>Profile</h3>
+              </div>
+            </div>
+            <p class="module-copy">See your saved account details and member identity.</p>
+            <a class="button button-secondary" href="profile.html">Open Profile</a>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="auth-modal" aria-hidden="true">
+    <div class="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-modal-title">
+      <button class="modal-close" id="close-auth-modal" type="button" aria-label="Close account modal">×</button>
+
+      <div class="auth-copy">
+        <p class="eyebrow">Cafe club access</p>
+        <h2 id="auth-modal-title">Keep your cafe moments in one soft little place.</h2>
+        <p>
+          Log in or sign up to get booking reminders, dessert drop updates, and the cutest member perks in the neighborhood.
+        </p>
+        <div class="auth-highlights">
+          <span class="highlight-pill">Be a member today</span>
+          <span class="highlight-pill">Try our purrfect food</span>
+          <span class="highlight-pill">Meet the feline crew</span>
+        </div>
+      </div>
+
+      <div class="auth-card">
+        <div class="auth-toggle" role="tablist" aria-label="Account forms">
+          <button class="toggle-button active" id="login-tab" type="button" data-mode="login" aria-selected="true">Login</button>
+          <button class="toggle-button" id="signup-tab" type="button" data-mode="signup" aria-selected="false">Sign Up</button>
+        </div>
+
+        <p class="auth-intro" id="auth-intro">Welcome back. Your favorite window seat might be waiting.</p>
+
+        <form class="auth-form" id="auth-form">
+          <div class="field-group signup-only hidden-field" id="name-group">
+            <label for="name">Full Name</label>
+            <input id="name" name="name" type="text" placeholder="Enter full name" required>
+          </div>
+
+          <div class="field-group signup-only hidden-field" id="username-group">
+            <label for="username">Username</label>
+            <input id="username" name="username" type="text" placeholder="Enter username" required>
+          </div>
+
+          <div class="field-group">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="Enter email address" required>
+          </div>
+
+          <p class="email-check signup-only hidden-field" id="email-check" aria-live="polite"></p>
+
+          <div class="field-group">
+            <label for="password">Password</label>
+            <div class="password-field">
+              <input id="password" name="password" type="password" placeholder="Enter password" required>
+              <button class="password-toggle" type="button" data-target="password" aria-label="Show password" aria-pressed="false">
+                <span class="sr-only">Toggle password visibility</span>
+                <svg class="icon-eye icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M1.5 12s3.8-6.5 10.5-6.5S22.5 12 22.5 12 18.7 18.5 12 18.5 1.5 12 1.5 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+                <svg class="icon-eye icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 3l18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M9.9 5.8A10.9 10.9 0 0 1 12 5.5c6.7 0 10.5 6.5 10.5 6.5a18.5 18.5 0 0 1-4 4.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.2 6.2A18.8 18.8 0 0 0 1.5 12S5.3 18.5 12 18.5c1.7 0 3.2-.4 4.5-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="field-group signup-only hidden-field" id="confirm-group">
+            <label for="confirm-password">Confirm Password</label>
+            <div class="password-field">
+              <input id="confirm-password" name="confirm-password" type="password" placeholder="Confirm password" required>
+              <button class="password-toggle" type="button" data-target="confirm-password" aria-label="Show confirm password" aria-pressed="false">
+                <span class="sr-only">Toggle confirm password visibility</span>
+                <svg class="icon-eye icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M1.5 12s3.8-6.5 10.5-6.5S22.5 12 22.5 12 18.7 18.5 12 18.5 1.5 12 1.5 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+                </svg>
+                <svg class="icon-eye icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 3l18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M9.9 5.8A10.9 10.9 0 0 1 12 5.5c6.7 0 10.5 6.5 10.5 6.5a18.5 18.5 0 0 1-4 4.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M6.2 6.2A18.8 18.8 0 0 0 1.5 12S5.3 18.5 12 18.5c1.7 0 3.2-.4 4.5-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            </div>
+            <p class="confirm-check" id="confirm-check" aria-live="polite"></p>
+          </div>
+
+          <div class="password-checklist signup-only hidden-field" id="password-checklist" aria-live="polite">
+            <p class="checklist-title">Password checklist</p>
+            <ul class="checklist-items">
+              <li class="checklist-item" id="rule-length">Should be at least 8 characters</li>
+              <li class="checklist-item" id="rule-case">Include an uppercase and lowercase character</li>
+              <li class="checklist-item" id="rule-number">Include a number</li>
+              <li class="checklist-item" id="rule-special">Include a special character</li>
+            </ul>
+          </div>
+
+          <button class="button button-primary button-full" id="auth-submit" type="submit">Login</button>
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

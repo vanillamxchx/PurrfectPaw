@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Paw Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="module-page-shell">
+    <div class="module-page">
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="index.html">
+            <img class="brand-mark" src="assets/logo.png" alt="Purrfect Paw logo">
+            <span>Purrfect Paw</span>
+          </a>
+        </div>
+        <div class="nav-right">
+          <div class="nav-datetime" id="nav-datetime" aria-live="polite"></div>
+          <a class="cart-link" href="cart.html" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2.2l1.4 8.2a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 1.9-1.5L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="17" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="module-layout">
+        <aside class="module-sidebar">
+          <p class="eyebrow">Logged in</p>
+          <h2 class="module-page-title">Member Hub</h2>
+          <div class="module-user">
+            <div class="module-user-copy">
+              <p><strong id="member-display-name">-</strong></p>
+              <p id="member-display-username">-</p>
+            </div>
+            <div class="module-user-avatar" aria-hidden="true"></div>
+          </div>
+          <div class="module-nav">
+            <a href="menu.html" data-page="menu">Menu</a>
+            <a href="cart.html" data-page="cart">Cart</a>
+            <a href="felines.html" data-page="felines">Felines</a>
+            <a href="profile.html" data-page="profile">Profile</a>
+          </div>
+          <div class="module-nav-actions">
+            <button class="button button-secondary module-logout" id="member-logout-button" type="button">Logout</button>
+          </div>
+        </aside>
+
+        <section class="module-panel">
+          <h1>Menu</h1>
+          <p class="module-note">Pick a few cafe favorites and add them to your cart.</p>
+          <div class="module-stack">
+            <div class="menu-category">
+              <h2 class="menu-category-title">Coffee</h2>
+              <div class="menu-category-items">
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/caramellatte.jpg" alt="Caramel Whisker Latte">
+                    <div>
+                      <strong>Caramel Whisker Latte</strong>
+                      <p>Espresso, caramel cream, silky steamed milk</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱370</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Caramel Whisker Latte" data-price="370">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/hazelnut.jpeg" alt="Hazelnut Purrccino">
+                    <div>
+                      <strong>Hazelnut Purrccino</strong>
+                      <p>Nutty espresso blend with soft foam and cocoa dust</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱370</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Hazelnut Purrccino" data-price="370">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h2 class="menu-category-title">Non-Coffee</h2>
+              <div class="menu-category-items">
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/berrylatte.jpg" alt="Berry Cloud Latte">
+                    <div>
+                      <strong>Berry Cloud Latte</strong>
+                      <p>Strawberry milk, whipped cream, heart sprinkles</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱370</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Berry Cloud Latte" data-price="370">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/honeymilk.jpg" alt="Honey Bunny Milk">
+                    <div>
+                      <strong>Honey Bunny Milk</strong>
+                      <p>Warm honey milk with vanilla and cinnamon</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱300</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Honey Bunny Milk" data-price="300">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h2 class="menu-category-title">Tea</h2>
+              <div class="menu-category-items">
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/rosetea.jpeg" alt="Rose Garden Tea">
+                    <div>
+                      <strong>Rose Garden Tea</strong>
+                      <p>Floral black tea with rose petals and citrus</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱300</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Rose Garden Tea" data-price="300">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/minttea.jpg" alt="Mint Moon Tea">
+                    <div>
+                      <strong>Mint Moon Tea</strong>
+                      <p>Cooling herbal blend with mint and chamomile</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱300</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Mint Moon Tea" data-price="300">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h2 class="menu-category-title">Pastries</h2>
+              <div class="menu-category-items">
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/pawprintcupcake.webp" alt="Paw Print Cupcake">
+                    <div>
+                      <strong>Paw Print Cupcake</strong>
+                      <p>Vanilla cupcake with marshmallow frosting</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱300</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Paw Print Cupcake" data-price="300">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/butterbiscuitscone.jpeg" alt="Butter Biscuit Scone">
+                    <div>
+                      <strong>Butter Biscuit Scone</strong>
+                      <p>Flaky scone with berry jam and soft cream</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱245</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Butter Biscuit Scone" data-price="245">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/gardenteatoastie.webp" alt="Garden Tea Toastie">
+                    <div>
+                      <strong>Garden Tea Toastie</strong>
+                      <p>Buttery toastie with rose salt chips</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱400</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Garden Tea Toastie" data-price="400">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-category">
+              <h2 class="menu-category-title">Cat Treats</h2>
+              <div class="menu-category-items">
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/catnipbites.jpg" alt="Catnip Crunch Bites">
+                    <div>
+                      <strong>Catnip Crunch Bites</strong>
+                      <p>Crunchy little treats with a playful catnip aroma.</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱180</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Catnip Crunch Bites" data-price="180">Add</button>
+                  </div>
+                </div>
+                <div class="member-list-item">
+                  <div class="menu-item-main">
+                    <img class="item-thumb" src="assets/salmonstarnibbles.jpg" alt="Salmon Star Nibbles">
+                    <div>
+                      <strong>Salmon Star Nibbles</strong>
+                      <p>Soft salmon treats shaped like tiny stars for cafe cats.</p>
+                    </div>
+                  </div>
+                  <div class="module-action">
+                    <span>₱220</span>
+                    <div class="quantity-picker" aria-label="Choose quantity">
+                      <button class="quantity-button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                      <span class="quantity-value" aria-live="polite">1</span>
+                      <button class="quantity-button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+                    <button class="button button-secondary add-cart-button" type="button" data-item="Salmon Star Nibbles" data-price="220">Add</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="member.js"></script>
+  <script>renderMenuPage();</script>
+</body>
+</html>

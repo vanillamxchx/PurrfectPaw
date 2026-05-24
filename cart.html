@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Paw Cart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="module-page-shell">
+    <div class="module-page">
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="index.html">
+            <img class="brand-mark" src="assets/logo.png" alt="Purrfect Paw logo">
+            <span>Purrfect Paw</span>
+          </a>
+        </div>
+        <div class="nav-right">
+          <div class="nav-datetime" id="nav-datetime" aria-live="polite"></div>
+          <a class="cart-link" href="cart.html" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2.2l1.4 8.2a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 1.9-1.5L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="17" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="module-layout">
+        <aside class="module-sidebar">
+          <p class="eyebrow">Logged in</p>
+          <h2 class="module-page-title">Member Hub</h2>
+          <div class="module-user">
+            <div class="module-user-copy">
+              <p><strong id="member-display-name">-</strong></p>
+              <p id="member-display-username">-</p>
+            </div>
+            <div class="module-user-avatar" aria-hidden="true"></div>
+          </div>
+          <div class="module-nav">
+            <a href="menu.html" data-page="menu">Menu</a>
+            <a href="cart.html" data-page="cart">Cart</a>
+            <a href="felines.html" data-page="felines">Felines</a>
+            <a href="profile.html" data-page="profile">Profile</a>
+          </div>
+          <div class="module-nav-actions">
+            <button class="button button-secondary module-logout" id="member-logout-button" type="button">Logout</button>
+          </div>
+        </aside>
+
+        <section class="module-panel">
+          <h1>Cart</h1>
+          <p class="module-note">Here&apos;s everything you&apos;ve picked so far.</p>
+          <div class="module-stack" id="cart-page-items">
+            <p class="empty-state">Your cart is feeling a little empty.</p>
+          </div>
+          <div class="cart-footer">
+            <div class="cart-footer-copy">
+              <strong>Total</strong>
+              <strong id="cart-page-total">₱0</strong>
+            </div>
+            <button class="button button-primary" id="checkout-button" type="button">Checkout</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="checkout-modal" aria-hidden="true">
+    <div class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkout-modal-title">
+      <button class="modal-close" id="close-checkout-modal" type="button" aria-label="Close checkout modal">×</button>
+      <div id="checkout-summary-view">
+        <p class="eyebrow">Checkout</p>
+        <h2 id="checkout-modal-title">Review your order</h2>
+        <p class="auth-intro">Here’s a quick summary before we confirm your cafe order.</p>
+        <div class="checkout-summary" id="checkout-summary-text"></div>
+        <div class="checkout-modal-actions">
+          <button class="button button-secondary" id="cancel-checkout-button" type="button">Cancel</button>
+          <button class="button button-primary" id="confirm-checkout-button" type="button">Confirm Checkout</button>
+        </div>
+      </div>
+
+      <div id="checkout-receipt-view" class="hidden-field" aria-hidden="true">
+        <p class="eyebrow">Receipt</p>
+        <h2>Your order is confirmed</h2>
+        <p class="auth-intro">Your Purrfect Paw receipt is ready.</p>
+        <div class="checkout-receipt" id="checkout-receipt-text"></div>
+        <div class="checkout-modal-actions checkout-modal-actions-end">
+          <button class="button button-primary" id="done-checkout-button" type="button">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="member.js"></script>
+  <script>renderCartPage();</script>
+</body>
+</html>

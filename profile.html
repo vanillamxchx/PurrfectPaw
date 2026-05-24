@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Purrfect Paw Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="module-page-shell">
+    <div class="module-page">
+      <nav class="nav">
+        <div class="nav-left">
+          <a class="brand" href="index.html">
+            <img class="brand-mark" src="assets/logo.png" alt="Purrfect Paw logo">
+            <span>Purrfect Paw</span>
+          </a>
+        </div>
+        <div class="nav-right">
+          <div class="nav-datetime" id="nav-datetime" aria-live="polite"></div>
+          <a class="cart-link" href="cart.html" aria-label="Open cart">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 4h2.2l1.4 8.2a2 2 0 0 0 2 1.7h7.7a2 2 0 0 0 1.9-1.5L20 7H7.1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="10" cy="19" r="1.6" fill="currentColor"/>
+              <circle cx="17" cy="19" r="1.6" fill="currentColor"/>
+            </svg>
+            <span class="cart-badge" id="cart-badge">0</span>
+          </a>
+        </div>
+      </nav>
+
+      <div class="module-layout">
+        <aside class="module-sidebar">
+          <p class="eyebrow">Logged in</p>
+          <h2 class="module-page-title">Member Hub</h2>
+          <div class="module-user">
+            <div class="module-user-copy">
+              <p><strong id="member-display-name">-</strong></p>
+              <p id="member-display-username">-</p>
+            </div>
+            <div class="module-user-avatar" aria-hidden="true"></div>
+          </div>
+          <div class="module-nav">
+            <a href="menu.html" data-page="menu">Menu</a>
+            <a href="cart.html" data-page="cart">Cart</a>
+            <a href="felines.html" data-page="felines">Felines</a>
+            <a href="profile.html" data-page="profile">Profile</a>
+          </div>
+          <div class="module-nav-actions">
+            <button class="button button-secondary module-logout" id="member-logout-button" type="button">Logout</button>
+          </div>
+        </aside>
+
+        <section class="module-panel">
+          <h1>Profile</h1>
+          <p class="module-note">Your saved member details inside Purrfect Paw.</p>
+          <div class="module-stack">
+            <div class="profile-row">
+              <span>Full Name</span>
+              <strong id="profile-page-name">-</strong>
+            </div>
+            <div class="profile-row">
+              <span>Username</span>
+              <strong id="profile-page-username">-</strong>
+            </div>
+            <div class="profile-row">
+              <span>Email</span>
+              <strong id="profile-page-email">-</strong>
+            </div>
+            <div class="profile-row">
+              <span>Password</span>
+              <strong id="profile-page-password">********</strong>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button class="button button-primary" id="edit-account-button" type="button">Update Password</button>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="profile-edit-modal" aria-hidden="true">
+    <div class="profile-edit-modal" role="dialog" aria-modal="true" aria-labelledby="profile-edit-title">
+      <button class="modal-close" id="close-profile-edit-modal" type="button" aria-label="Close edit account modal">×</button>
+      <p class="eyebrow">Edit Account</p>
+      <h2 id="profile-edit-title">Update your password</h2>
+      <p class="auth-intro">Choose a new password for your Purrfect Paw account.</p>
+      <form class="auth-form" id="profile-edit-form">
+        <div class="field-group">
+          <label for="profile-old-password">Old Password</label>
+          <div class="password-field">
+            <input id="profile-old-password" name="profile-old-password" type="password" placeholder="Enter your current password" required>
+            <button class="password-toggle" type="button" data-target="profile-old-password" aria-label="Show old password" aria-pressed="false">
+              <svg class="icon-eye icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <svg class="icon-eye icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 3 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M10.7 5.2A11.5 11.5 0 0 1 12 5c6.4 0 10 6 10 6a18.7 18.7 0 0 1-3.1 3.8M6.1 6.1C3.8 7.8 2 11 2 11s3.6 6 10 6c1.4 0 2.6-.2 3.8-.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.8 9.8A3.2 3.2 0 0 0 14.2 14.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="email-check profile-live-check" id="profile-old-password-check" aria-live="polite"></p>
+        <div class="field-group">
+          <label for="profile-new-password">New Password</label>
+          <div class="password-field">
+            <input id="profile-new-password" name="profile-new-password" type="password" placeholder="Enter a new password" required>
+            <button class="password-toggle" type="button" data-target="profile-new-password" aria-label="Show password" aria-pressed="false">
+              <svg class="icon-eye icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <svg class="icon-eye icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 3 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M10.7 5.2A11.5 11.5 0 0 1 12 5c6.4 0 10 6 10 6a18.7 18.7 0 0 1-3.1 3.8M6.1 6.1C3.8 7.8 2 11 2 11s3.6 6 10 6c1.4 0 2.6-.2 3.8-.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.8 9.8A3.2 3.2 0 0 0 14.2 14.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="password-checklist" id="profile-password-checklist" aria-live="polite">
+          <p class="checklist-title">Password checklist</p>
+          <ul class="checklist-items">
+            <li class="checklist-item" id="profile-rule-length">Should be at least 8 characters</li>
+            <li class="checklist-item" id="profile-rule-case">Include an uppercase and lowercase character</li>
+            <li class="checklist-item" id="profile-rule-number">Include a number</li>
+            <li class="checklist-item" id="profile-rule-special">Include a special character</li>
+          </ul>
+        </div>
+        <div class="field-group">
+          <label for="profile-confirm-password">Confirm Password</label>
+          <div class="password-field">
+            <input id="profile-confirm-password" name="profile-confirm-password" type="password" placeholder="Type it again" required>
+            <button class="password-toggle" type="button" data-target="profile-confirm-password" aria-label="Show confirm password" aria-pressed="false">
+              <svg class="icon-eye icon-eye-open" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M2 12s3.6-6 10-6 10 6 10 6-3.6 6-10 6-10-6-10-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+              </svg>
+              <svg class="icon-eye icon-eye-closed" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m3 3 18 18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M10.7 5.2A11.5 11.5 0 0 1 12 5c6.4 0 10 6 10 6a18.7 18.7 0 0 1-3.1 3.8M6.1 6.1C3.8 7.8 2 11 2 11s3.6 6 10 6c1.4 0 2.6-.2 3.8-.7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9.8 9.8A3.2 3.2 0 0 0 14.2 14.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="email-check profile-live-check" id="profile-confirm-password-check" aria-live="polite"></p>
+        <p class="form-message" id="profile-edit-message" aria-live="polite"></p>
+        <button class="button button-primary button-full" type="submit">Save Password</button>
+      </form>
+    </div>
+  </div>
+  <script src="member.js"></script>
+  <script>renderProfilePage();</script>
+</body>
+</html>
