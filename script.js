@@ -37,9 +37,11 @@ const hubLogoutButton = document.getElementById("hub-logout-button");
 
 const moods = [
   "Mochi says: today is perfect for a caramel latte and a long nap.",
-  "Biscuit says: order something sweet and sit where the sun reaches your shoes.",
-  "Miso says: bring your favorite person and split a plate of cupcakes.",
-  "Pebble says: slow down, breathe deep, and let a purring cat reset your day."
+  "Miso says: order something sweet and sit where the sun reaches your shoes.",
+  "Pebble says: bring your favorite person and split a plate of cupcakes.",
+  "Luna says: slow down, breathe deep, and let a purring cat reset your day.",
+  "Tofu says: sip green tea and let the quiet moments stretch longer.",
+  "Maple says: find a cozy corner and let the scent of cinnamon warm your thoughts."
 ];
 
 const featuredCats = [
